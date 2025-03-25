@@ -28,26 +28,436 @@
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
 }
 
-.container {
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.wrap {
     width: 100vw;
-    height: 100vh;
+    min-width: 365px;
+    background-color: #5B2386;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-header {
-    min-width: 267px;
-    max-width: 564px;
-    min-height: 126px;
-    max-height: 265px;
-    background-color: lightcoral;
-}
-
-main {
+.header {
+    width: 564px;
+    height: 265px;
+    background: url(../img/clock.png) no-repeat center center;
+    margin-top: 120px;
     
+    display: flex;
+    align-items: center;
 }
 
-footer {
-    height: 149px;
+.header img {
+    width: 564px;
+    height: 112px;
+}
+
+.description p:first-of-type {
+    margin-top: 46px;
+    width: 486px;
+    height: 40px;
+    font-family: "OTEnjoystoriesBA";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #F5DF4D;
+}
+
+.description p:last-of-type {
+    margin-top: 73px;
+    width: 493px;
+    height: 95px;
+    color: #fff;
+
+    font-family: "GmarketSansBold";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: bottom;
+
+    background: url(../img/quotes.png) no-repeat center 13px / contain;
+}
+
+.description p:last-of-type span {
+    font-family: "GmarketSansMedium";
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.calculation {
+    margin-top: 102px;
+
+    font-family: "GmarketSansMedium";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    
+    position: relative;
+}
+
+.calculation span {
+    vertical-align: sub;
+}
+
+.calculation input {
+    width: 228px;
+    height: 57px;
+    border-radius: 7px;
+    font-family: "GmarketSansMedium";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 57px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+}
+
+.calculation input::placeholder {
+    color: #BABCBE;
+}
+
+.calculation p:nth-of-type(2){
+    margin-top: 27px;
+}
+
+.calculation button {
+    padding: 7px 0 0;
+    margin-top: 115px;
+    width: 565px;
+    height: 66px;
+    border-radius: 56px;
+    background-color: #FCEE21;
+    border: none;
+
+    font-family: "GmarketSansBold";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #5B2386;
+
+    box-shadow: 0px 0px 10px 0px #00000080;
+}
+
+.calculation p:nth-of-type(3) span,
+.calculation p:nth-of-type(4) span {
+    font-family: "GmarketSansBold";
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.calculation p:nth-of-type(3) {
+    margin-top: 115px;
+}
+
+.calculation p:nth-of-type(4) {
+    margin-top: 17px;
+}
+
+.calculation img {
+    position: absolute;
+    top: 270px;
+    padding-left: 7px;
+}
+
+.btn-group button {
+    border: none;
+    margin-top: 127px;
+    width: 356px;
+    height: 66px;
+    border-radius: 56px;
+
+    font-family: "GmarketSansBold";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #5B2386;
+    padding: 7px 0 0;
+    background-color: #FCEE21;
+
+    box-shadow: 0px 0px 10px 0px #00000080;
+}
+
+.btn-group button:last-of-type {
+    width: 191px;
+    background-color: #fff;
+
+    margin-left: 18px;
+}
+
+.footer {
+    margin-top: 130px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.footer img {
+    width: 125px;
+    height: 25px;
+}
+
+.footer p {
+    color: #fff;
+    margin-top: 20px;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 11.8px;
+    line-height: 17px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+#dialog {
+    border: none;
+
+    width: 800px;
+    height: 800px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+ }
+
+#dialog .dialogWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dialog p {
+    color: #5B2386;
+    font-family: "OTEnjoystoriesBA";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+#dialog p:first-of-type {
+    margin-top: 70px;
+    font-size: 96px;
+}
+
+#dialog p:last-of-type {
+    margin-top: 4px;
+}
+
+#dialog img {
+    margin-top: 29px;
+}
+
+#dialog button {
+    border: none;
+    margin-top: 74px;
+    width: 508px;
+    height: 66px;
+    border-radius: 56px;
+    background-color: #FCEE21;
+    color: #5B2386;
+    box-shadow: 0px 0px 10px 0px #00000080;
+
+    font-family: "GmarketSansBold";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    padding: 7px 0 0;
+}
+
+@media (max-width: 767px) {
+    .header {
+        margin-top: 76px;
+        width: 267px;
+        height: 126px;
+        background-size: 125px;
+    }
+
+    .header img {
+        width: 267px;
+        height: 53px;
+    }
+
+    .description p:first-of-type {
+        margin-top: 31px;
+        width: 297px;
+        height: 24px;
+        font-size: 22px;
+    }
+
+    .description p:last-of-type {
+        margin-top: 62px;
+        width: 302px;
+        height: 68px;
+    
+        font-size: 14px;
+        line-height: 25px;
+    
+        background: url(../img/quotes.png) no-repeat center 21px / contain;
+    }
+    
+    .description p:last-of-type span {
+        font-family: "GmarketSansMedium";
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    .calculation {
+        margin-top: 62px;
+    
+        font-size: 14px;
+    }
+    
+    .calculation span {
+        vertical-align: sub;
+    }
+    
+    .calculation input {
+        width: 156px;
+        height: 37px;
+        font-size: 14px;
+        padding: 0;
+    }
+    
+    .calculation p:nth-of-type(2){
+        margin: 0 auto;
+        margin-top: 7px;
+        width: 311px;
+        line-height: 48px;
+    }
+    
+    .calculation button {
+        padding: 7px 36.5px 0;
+        margin-top: 49px;
+        width: 241px;
+        height: 68px;
+        border-radius: 13px;
+    
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .calculation img {
+        width: 43px;
+        height: 48px;
+        position: absolute;
+        top: 218px;
+
+        padding-left: 6px;
+    }
+    
+    .calculation p:nth-of-type(3) span,
+    .calculation p:nth-of-type(4) span {
+        font-size: 24px;
+    }
+    
+    .calculation p:nth-of-type(3) {
+        margin-top: 69px;
+    }
+    
+    .calculation p:nth-of-type(4) {
+        margin-top: 15px;
+    }
+
+    .btn-group button {
+        padding: 0;
+        margin-top: 55px;
+        width: 186px;
+        height: 40px;
+
+        font-size: 14px;
+        padding: 6px 0 0;
+    }
+    
+    .btn-group button:last-of-type {
+        width: 92px;
+        margin-left: 13px;
+    }
+
+    .footer {
+        margin-top: 83px;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    
+    .footer img {
+        width: 91px;
+        height: 18px;
+    }
+    
+    .footer p {
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 17px;
+        font-family: "Noto Sans KR";
+        font-weight: 400;
+        font-size: 9px;
+        line-height: 17px;
+        letter-spacing: 0%;
+        vertical-align: middle;
+    }
+
+    #dialog {
+        padding: 0;
+        width: 330px;
+        height: 500px;
+    }
+    
+    #dialog .dialogWrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #dialog p:first-of-type {
+        margin-top: 40px;
+        font-size: 64px;
+    }
+    
+    #dialog p:last-of-type {
+        margin-top: 4px;
+    }
+    
+    #dialog img {
+        margin-top: 24px;
+        width: 241px;
+        height: 188px;
+    }
+    
+    #dialog button {
+        margin-top: 34px;
+        width: 241px;
+        height: 68px;
+        border-radius: 13px;
+
+        font-size: 14px;
+    
+        padding: 7px 0 0;
+    }
 }
