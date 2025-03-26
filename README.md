@@ -5,4 +5,4 @@
 # 개발자
 * 김용일
 # 결과물
-* 
+* <https://minerkyi.github.io/10000hours/>
