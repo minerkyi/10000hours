@@ -121,6 +121,7 @@
 }
 
 .calculation input {
+    border: none;
     width: 228px;
     height: 57px;
     border-radius: 7px;
@@ -131,7 +132,6 @@
     letter-spacing: 0%;
     text-align: center;
     vertical-align: middle;
-    border: none;
 }
 
 .calculation input::placeholder {
@@ -206,10 +206,11 @@
     box-shadow: 0px 0px 10px 0px #00000080;
 }
 
+
 .btn-group button:last-of-type {
     width: 191px;
     background-color: #fff;
-
+    
     margin-left: 18px;
 }
 
@@ -235,23 +236,23 @@
     vertical-align: middle;
 }
 
-#dialog {
+#dialog-training {
     border: none;
-
+    
     width: 800px;
     height: 800px;
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
- }
+}
 
-#dialog .dialogWrap {
+#dialog-training .dialog-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#dialog p {
+#dialog-training p {
     color: #5B2386;
     font-family: "OTEnjoystoriesBA";
     font-weight: 700;
@@ -260,20 +261,20 @@
     letter-spacing: 0%;
 }
 
-#dialog p:first-of-type {
+#dialog-training p:first-of-type {
     margin-top: 70px;
     font-size: 96px;
 }
 
-#dialog p:last-of-type {
+#dialog-training p:last-of-type {
     margin-top: 4px;
 }
 
-#dialog img {
+#dialog-training img {
     margin-top: 29px;
 }
 
-#dialog button {
+#dialog-training button {
     border: none;
     margin-top: 74px;
     width: 508px;
@@ -282,14 +283,19 @@
     background-color: #FCEE21;
     color: #5B2386;
     box-shadow: 0px 0px 10px 0px #00000080;
-
+    
     font-family: "GmarketSansBold";
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
     letter-spacing: 0%;
-
+    
     padding: 7px 0 0;
+}
+
+.btn-group button:first-of-type,
+#btn-close {
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -299,7 +305,7 @@
         height: 126px;
         background-size: 125px;
     }
-
+    
     .header img {
         width: 267px;
         height: 53px;
@@ -336,7 +342,7 @@
     }
     
     .calculation span {
-        vertical-align: sub;
+        vertical-align: middle;
     }
     
     .calculation input {
@@ -395,7 +401,7 @@
         font-size: 14px;
         padding: 6px 0 0;
     }
-    
+
     .btn-group button:last-of-type {
         width: 92px;
         margin-left: 13px;
@@ -423,34 +429,34 @@
         vertical-align: middle;
     }
 
-    #dialog {
+    #dialog-training {
         padding: 0;
         width: 330px;
         height: 500px;
     }
     
-    #dialog .dialogWrap {
+    #dialog-training .dialog-wrap {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     
-    #dialog p:first-of-type {
+    #dialog-training p:first-of-type {
         margin-top: 40px;
         font-size: 64px;
     }
     
-    #dialog p:last-of-type {
+    #dialog-training p:last-of-type {
         margin-top: 4px;
     }
     
-    #dialog img {
+    #dialog-training img {
         margin-top: 24px;
         width: 241px;
         height: 188px;
     }
     
-    #dialog button {
+    #dialog-training button {
         margin-top: 34px;
         width: 241px;
         height: 68px;

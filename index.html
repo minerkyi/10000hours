@@ -12,7 +12,7 @@
         <div class="wrap">
             <section class="header">
                 <h1 class="sr-only">1만 시간의 법칙</h1>
-                <img src="./img/title.png" sizes="(max-width:360px) 267px" alt="1만 시간의 법칙">
+                <img src="./img/title.png" sizes="(max-width:360px) 267px" alt="">
             </section>
             <section class="description">
                 <h2 class="sr-only">1만 시간의 법칙 설명</h2>
@@ -26,10 +26,10 @@
             <section class="calculation">
                 <h2 class="sr-only">1만 시간의 법칙 계산</h2>
                 <p>
-                    나는 <input type="text" placeholder="예)프로그래밍"> <span>전문가가 될 것이다.</span>
+                    나는 <input type="text" name="job" placeholder="예)프로그래밍"> <span>전문가가 될 것이다.</span>
                 </p>
                 <p>
-                    그래서 앞으로 매일 하루에 <input type="text" placeholder="예)5시간"> 시간씩 훈련할 것이다.
+                    그래서 앞으로 매일 하루에 <input type="text" name="hours" placeholder="예)5시간"> 시간씩 훈련할 것이다.
                 </p>
                 <button>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
                 <img src="./img/click.png" alt="">
@@ -38,7 +38,7 @@
             </section>
             <section class="btn-group">
                 <h2 class="sr-only">1만 시간의 법칙 훈련 정보</h2>
-                <button id="showDialogBtn">훈련하러 가기 GO!GO!</button><button>공유하기</button>
+                <button id="btn-show-dialog">훈련하러 가기 GO!GO!</button><button>공유하기</button>
             </section>
             <section class="footer">
                 <h2 class="sr-only">저작권 정보</h2>
@@ -49,12 +49,12 @@
                 </p>
             </section>
         </div>
-        <dialog id="dialog">
-            <div class="dialogWrap">
+        <dialog id="dialog-training">
+            <div class="dialog-wrap">
                 <p>화이팅!!♥♥♥</p>
                 <p>당신의 꿈을 응원합니다!</p>
-                <img src="./img/licat.png" alt="licat">
-                <button id="closeBtn">종료하고 진짜 훈련하러 가기 GO!GO!</button>
+                <img src="./img/licat.png" alt="">
+                <button id="btn-close">종료하고 진짜 훈련하러 가기 GO!GO!</button>
             </div>
         </dialog>
         <script src="./js/10000hours.js"></script>
